@@ -3,10 +3,8 @@
 % The covariance function is specified as:
 %
 % k(x^p,x^q) = s2 * \delta(p,q)
-%
 % where s2 is the noise variance and \delta(p,q) is a Kronecker delta function
 % which is 1 iff p=q and zero otherwise. The hyperparameter is
-%
 % logtheta = [ log(sqrt(s2)) ]
 %
 % For more help on design of covariance functions, try "help covFunctions".
