@@ -14,7 +14,8 @@ curb.snr = 1000; curb.ls = 100; curb.std = std(gpmodel.inputs);   % set hyp curb
 if ~isfield(gpmodel,'hyp')  % if we don't pass in hyper-parameters, define them
   gpmodel.hyp = zeros(numD+2,E); nlml = zeros(1,E);
   % initializing the projmatrix parameters by randn(1, D);
-  
+  [okaybhi1, okaybhi2]  = size(argsv.bigA)
+  aurnumD = numD
   correctinit = reshape(argsv.bigA, 1, numD)/argsv.ell;
   lh = repmat([correctinit 0 -1]',1,E);   % init hyp length scales
 %  lh(numD + 1,:) = log(argsv.sigvar^0.5);
